@@ -39,6 +39,8 @@
           <li class="nav-item">
             <!--		<h4 class="text-light">För arbetsgivare</h4>-->
             <a class="nav-link" href="/">Blivald.se</a>
+            <a class="nav-link" href="/.auth/login/github" v-if="!user.userDetails">Login</a>
+            <a class="nav-link" href="/.auth/logout" v-if="user.userDetails">Log out</a>
           </li>
         </ul>
       </div>
