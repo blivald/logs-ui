@@ -204,7 +204,7 @@
 
     async function login(){
       var client = await getUserInfo();
-      if(client === null)
+      if(client == null)
         return false;
 
       console.log(client);
@@ -533,7 +533,7 @@
 
                 var grid;
 
-                function populateTable(){
+                async function populateTable(){
 
                   if(!login())
                     return;
