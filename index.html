@@ -535,9 +535,11 @@
 
                 function populateTable(){
 
-                  var loggedIn = login();
-                  if(!loggedIn)
-                    return;
+                    getUserInfo().then(response => {
+                      if (response == null) {
+                        throw new Error("Logga in ");
+                      }
+                    });
 
                   var hash = window.location.hash.split('#')[1];
                   var log = '';
