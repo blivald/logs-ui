@@ -39,8 +39,8 @@
           <li class="nav-item">
             <!--		<h4 class="text-light">För arbetsgivare</h4>-->
             <a class="nav-link" href="/">Blivald.se</a>
-            <a href="/.auth/login/github" v-if="!user.userDetails">Login</a>
-            <a href="/.auth/logout" v-if="user.userDetails">Log out</a>
+            <a class="nav-link" href="/.auth/login/github" v-if="!user.userDetails">Login</a>
+            <a class="nav-link" href="/.auth/logout" v-if="user.userDetails">Log out</a>
           </li>
         </ul>
       </div>
@@ -194,6 +194,8 @@
   <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
 
   <script>
+    
+    var user = null;
 
     function login(){
       if(user == null)
