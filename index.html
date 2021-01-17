@@ -545,14 +545,6 @@
 
                 function populateTable2(){
 
-                    getUserInfo().then(response => {
-                      if (response == null) {
-                        throw new Error("Logga in ");
-                      }else{
-                        populateTable2();
-                      }
-                    });
-
                   var hash = window.location.hash.split('#')[1];
                   var log = '';
                   if(typeof hash !== "undefined")
