@@ -534,10 +534,22 @@
                 var grid;
 
                 function populateTable(){
+                  getUserInfo().then(response => {
+                    if (response == null) {
+                      throw new Error("Logga in ");
+                    }else{
+                      populateTable2();
+                    }
+                  });
+                }
+
+                function populateTable2(){
 
                     getUserInfo().then(response => {
                       if (response == null) {
                         throw new Error("Logga in ");
+                      }else{
+                        populateTable2();
                       }
                     });
 
