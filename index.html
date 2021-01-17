@@ -195,10 +195,10 @@
 
   <script>
 
-    var user = null;
+    //var user = null;
 
     function login(){
-      if(user == null)
+      if(typeof user === 'undefined')
         return false;
 
       console.log(user.userDetails);
