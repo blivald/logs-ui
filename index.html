@@ -533,9 +533,10 @@
 
                 var grid;
 
-                async function populateTable(){
+                function populateTable(){
 
-                  if(!login())
+                  var loggedIn = login();
+                  if(!loggedIn)
                     return;
 
                   var hash = window.location.hash.split('#')[1];
