@@ -196,6 +196,9 @@
   <script>
 
     function login(){
+      if(user == null)
+        return;
+      
       console.log(user.userDetails);
 
     }
