@@ -195,13 +195,19 @@
 
   <script>
 
-    //var user = null;
+    async function getUserInfo() {
+      const response = await fetch("/.auth/me");
+      const payload = await response.json();
+      const { clientPrincipal } = payload;
+      return clientPrincipal;
+    }
 
     function login(){
-      if(typeof user === 'undefined')
+      var client = await getUserInfo();
+      if(client == null)
         return false;
 
-      console.log(user.userDetails);
+      console.log(client);
       return true;
     }
 
