@@ -283,7 +283,7 @@
       $("#alert").hide();
 
       if( typeof mapArray === 'undefined' ) {
-        $.get("https://api.blivald.se/user/customernumber", function(data, status){
+        $.get("https://api.blivald.se:455/user/customernumber", function(data, status){
           mapArray = data;
           populateTable();
         });
@@ -426,7 +426,7 @@
                   logpath = "";
                 }
 
-                var url = "https://api.blivald.se/logs/"+logpath+"/"+id;
+                var url = "https://api.blivald.se:453/logs/"+logpath+"/"+id;
 
 
                 $.get({url: url, beforeSend: function(xhr){xhr.setRequestHeader('Api-Key', 'Basic YXBpdXNlcjp1czN0aDNBcDE=');}, success: function(data, status){
