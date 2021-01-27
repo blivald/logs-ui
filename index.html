@@ -300,7 +300,7 @@
         return uuid.substring(0,8);
       }
 
-      var customerKey = found.RowKey;
+      var customerKey = found.rowKey;
       console.log( customerKey );
       return customerKey;
 
@@ -653,7 +653,7 @@
                     },
                     server: {
                       url: url,
-                      then: data => {collapseEvent(data);return data.map(card => [card.Created, getCustomerNumer(card.TransactionUid), card.TransactionUid,card.Severity, card.PartitionKey,card.Message,card.RowKey,card.CertificateId])}
+                      then: data => {collapseEvent(data);return data.map(card => [card.Created, getCustomerNumer(card.transactionUid), card.TransactionUid,card.severity, card.partitionKey,card.message,card.rowKey,card.certificateId])}
                     },
                   }).render(document.getElementById("wrapper"));
 
