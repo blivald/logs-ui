@@ -283,7 +283,7 @@
       $("#alert").hide();
 
       if( typeof mapArray === 'undefined' ) {
-        $.get("https://api.blivald.se:455/user/customernumber", function(data, status){
+        $.get("https://api.blivald.se:455/users/customernumber", function(data, status){
           mapArray = data;
           populateTable();
         });
