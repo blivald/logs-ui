@@ -653,7 +653,7 @@
                     },
                     server: {
                       url: url,
-                      then: data => {collapseEvent(data);return data.map(card => [card.Created, getCustomerNumer(card.transactionUid), card.TransactionUid,card.severity, card.partitionKey,card.message,card.rowKey,card.certificateId])}
+                      then: data => {collapseEvent(data);return data.map(card => [card.created, getCustomerNumer(card.transactionUid), card.transactionUid,card.severity, card.partitionKey,card.message,card.rowKey,card.certificateId])}
                     },
                   }).render(document.getElementById("wrapper"));
 
