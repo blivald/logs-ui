@@ -757,8 +757,9 @@
                   var d=new Date(logdate);
                   var dag = day[d.getDay()];
                   var datum = d.getDate();
+                  var m=month[d.getMonth()];
 
-                  var html = '<div class="text-danger"><strong>'+dag+'</strong></div><h3 class="mt-0 mb-0">'+datum+'</h3><div>Januari</div>';
+                  var html = '<div class="text-danger"><strong>'+dag+'</strong></div><h3 class="mt-0 mb-0">'+datum+'</h3><div>'+m+'</div>';
                   return html;
                 };
 
