@@ -283,7 +283,7 @@
       $("#alert").hide();
 
       if( typeof mapArray === 'undefined' ) {
-        $.get("https://services.blivald.se/users/customernumber", function(data, status){
+        $.get("https://api.blivald.se/users/customernumber", function(data, status){
           mapArray = data;
           populateTable();
         });
@@ -426,7 +426,7 @@
                   logpath = "";
                 }
 
-                var url = "https://services.blivald.se/logs/"+logpath+"/"+id;
+                var url = "https://api.blivald.se/logs/"+logpath+"/"+id;
 
 
                 $.get({url: url, beforeSend: function(xhr){xhr.setRequestHeader('Api-Key', 'Basic YXBpdXNlcjp1czN0aDNBcDE=');}, success: function(data, status){
@@ -498,7 +498,7 @@
                   logpath = "";
                 }
 
-                var url = "https://services.blivald.se/logs/"+logpath+"/"+uuid;
+                var url = "https://api.blivald.se/logs/"+logpath+"/"+uuid;
 
                 var color = "white";
                 var html;
@@ -552,7 +552,7 @@
                     log = hash;
                   }
 
-                  var url = "https://services.blivald.se/logs" + '/' + log;
+                  var url = "https://api.blivald.se/logs" + '/' + log;
 
                   $("#wrapper").children().remove();
 
