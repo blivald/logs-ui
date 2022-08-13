@@ -294,7 +294,7 @@
     function getCustomerNumer(uuid){
 
 
-      const found = mapArray.find(element => element.TransactionUid === uuid);
+      const found = mapArray.find(element => element.transactionUid === uuid);
 
       if(typeof found === 'undefined'){
         return uuid.substring(0,8);
